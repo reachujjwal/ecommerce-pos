@@ -1,0 +1,20 @@
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[pos-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[pos-system-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect table definition; there can be only one auto column and it must be defined as a key
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.2.0.jar!/:9.2.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar!/:9.2.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.2.0.jar!/:9.2.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.2.0.jar!/:9.2.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.0.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.0.jar!/:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.18.Final.jar!/:6.6.18.Final]
+	... 42 common frames omitted
+
+2026-02-06T00:23:26.102+05:30 DEBUG 16960 --- [pos-system] [           main] org.hibernate.SQL                        : alter table branch_working_days add constraint FK1pw0iposltokqnwyygxhix9oy foreign key (branch_id) references branches (id)
+Hibernate: alter table branch_working_days add constraint FK1pw0iposltokqnwyygxhix9oy foreign key (branch_id) references branches (id)
+2026-02-06T00:23:26.182+05:30  WARN 16960 --- [pos-system] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table branch_working_days add constraint FK1pw0iposltokqnwyygxhix9oy foreign key (branch_id) references branches (id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`e_commerce`.`#sql-16d8_3af`, CONSTRAINT `FK1pw0iposltokqnwyygxhix9oy` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`))]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table branch_working_days add constraint FK1pw0iposltokqnwyygxhix9oy foreign key (branch_id) references branches (id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`e_commerce`.`#sql-16d8_3af`, CONSTRAINT `FK1pw0iposltokqnwyygxhix9oy` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`))]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.18.Final.jar!/:6.6.18.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:576) ~[hibernate-core-6.6.18.Final.jar!/:6.6.18.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:516) ~[hibernate-core-6.6.18.Final.jar!/:6.6.18.Final]

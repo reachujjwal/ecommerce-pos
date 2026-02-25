@@ -1,0 +1,49 @@
+
+Hibernate: alter table 
+order_items add column id 
+bigint not null auto_increment
+Hibernate: alter table 
+branch_working_days add 
+constraint 
+FK1pw0iposltokqnwyygxhix9oy 
+foreign key (branch_id) 
+references branches (id)
+Hibernate: alter table orders 
+add constraint 
+FKjcfql8n80mxan8of04c8sd8k2 
+foreign key (branch_id) 
+references branches (id)
+Hibernate: alter table orders 
+add constraint 
+FKmb88e3a35geg9rxiefr1qma88 
+foreign key (cashier_id) 
+references users (id)
+Hibernate: alter table refund 
+add constraint 
+FK9k4bp7f3ke2e8kch7pcc23w94 
+foreign key (branch_id) 
+references branches (id)
+Hibernate: alter table refund 
+add constraint 
+FKaxo80pd4rmxa36iuyojfq2u58 
+foreign key (cashier_id) 
+references users (id)
+Hibernate: alter table 
+shift_report add constraint 
+FK6w19s2mrbru4cx0kh7ieuqwag 
+foreign key (branch_id) 
+references branches (id)
+Hibernate: alter table 
+shift_report add constraint 
+FKs4b2eu1cee26h7r2qq8gdnouk 
+foreign key (cashier_id) 
+references users (id)
+Hibernate: alter table shift_r
+eport_top_selling_products 
+add constraint 
+FKhm8uivkc820l6jknmj3d3qf99 
+foreign key 
+(top_selling_products_id) 
+references products (id)
+
+
