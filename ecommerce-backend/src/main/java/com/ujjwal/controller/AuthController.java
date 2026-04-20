@@ -29,8 +29,6 @@ public class AuthController {
 
     private final AuthService authService;
 
-
-
     @PostMapping("/signup")
     public ResponseEntity<ApiResponseBody<AuthResponse>> signupHandler(
             @RequestBody @Valid UserDTO req) throws UserException {

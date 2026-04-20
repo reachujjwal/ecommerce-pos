@@ -1,16 +1,16 @@
 version: "3.8"
 
 services:
-  posdb:
+  mysql-db:
     image: mysql:8.0
-    container_name: userdb
+    container_name: mysql-db
     ports:
       - "3301:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: userdb
+      MYSQL_DATABASE: ecommerce_db
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       timeout: 10s
       retries: 10
       interval: 10s
@@ -19,18 +19,28 @@ services:
       - ujjwal
 
   pos-system:
-    image: your-dockerhub-username/pos-system:latest
+    build: ./ecommerce-backend
     depends_on:
-      posdb:
+      mysql-db:
         condition: service_healthy
     ports:
       - "5000:5000"
     environment:
-      DB_HOST: posdb         # service name of the mysql container
+      DB_HOST: mysql-db
       DB_PORT: 3306
-      DB_NAME: userdb
+      DB_NAME: ecommerce_db
       DB_USERNAME: root
       DB_PASSWORD: root
+    networks:
+      - ujjwal
+
+
+  pos-frontend:
+    build: ./ecommerce-frontend
+    depends_on:
+      - pos-system
+    ports:
+      - "8080:80"
     networks:
       - ujjwal
 
