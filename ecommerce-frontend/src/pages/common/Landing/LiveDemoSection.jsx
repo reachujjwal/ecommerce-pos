@@ -7,7 +7,7 @@ const LiveDemoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const tabs = [
-    { id: 'pos', label: 'POS Terminal', icon: <ShoppingCart className="w-5 h-5" /> },
+    { id: 'pos', label: 'RetailHub Terminal', icon: <ShoppingCart className="w-5 h-5" /> },
     { id: 'analytics', label: 'Analytics', icon: <BarChart3 className="w-5 h-5" /> },
     { id: 'inventory', label: 'Inventory', icon: <Package className="w-5 h-5" /> },
     { id: 'customers', label: 'Customers', icon: <Users className="w-5 h-5" /> },
@@ -130,7 +130,7 @@ const LiveDemoSection = () => {
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
                   <div className="text-sm font-medium text-foreground">
-                    {activeTab === 'pos' && 'POS Terminal - Checkout'}
+                    {activeTab === 'pos' && 'RetailHub Terminal - Checkout'}
                     {activeTab === 'analytics' && 'Analytics Dashboard'}
                     {activeTab === 'inventory' && 'Inventory Management'}
                     {activeTab === 'customers' && 'Customer Management'}

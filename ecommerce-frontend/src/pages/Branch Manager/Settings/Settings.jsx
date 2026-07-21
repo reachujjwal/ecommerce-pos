@@ -164,7 +164,7 @@ const Settings = () => {
         <TabsContent value="printer">
           <Card>
             <CardHeader>
-              <CardTitle>POS Printer Settings</CardTitle>
+              <CardTitle>RetailHub Printer Settings</CardTitle>
               <CardDescription>
                 Configure your receipt printer settings.
               </CardDescription>

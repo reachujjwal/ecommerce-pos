@@ -30,7 +30,7 @@ const POSHeader = () => {
           </Button>
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-foreground">POS Terminal</h1>
+          <h1 className="text-2xl font-bold text-foreground">RetailHub Terminal</h1>
           <p className="text-sm text-muted-foreground">Create new order</p>
         </div>
         <div className="flex items-center space-x-2">

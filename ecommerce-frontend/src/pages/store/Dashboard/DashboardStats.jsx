@@ -51,28 +51,28 @@ const DashboardStats = () => {
     { 
       title: "Total Sales", 
       value: formatCurrency(storeOverview?.totalSales || 0), 
-      icon: <DollarSign className="w-8 h-8 text-emerald-500" />, 
+      icon: <DollarSign className="w-8 h-8 text-primary" />, 
       change: formatChange(storeOverview?.totalSales, storeOverview?.previousPeriodSales),
       loading: loading
     },
     { 
       title: "Total Branches", 
       value: storeOverview?.totalBranches || 0, 
-      icon: <Store className="w-8 h-8 text-emerald-500" />, 
+      icon: <Store className="w-8 h-8 text-primary" />, 
       change: formatChange(storeOverview?.totalBranches, storeOverview?.previousPeriodBranches),
       loading: loading
     },
     { 
       title: "Total Products", 
       value: storeOverview?.totalProducts || 0, 
-      icon: <ShoppingCart className="w-8 h-8 text-emerald-500" />, 
+      icon: <ShoppingCart className="w-8 h-8 text-primary" />, 
       change: formatChange(storeOverview?.totalProducts, storeOverview?.previousPeriodProducts),
       loading: loading
     },
     { 
       title: "Total Employees", 
       value: storeOverview?.totalEmployees || 0, 
-      icon: <Users className="w-8 h-8 text-emerald-500" />, 
+      icon: <Users className="w-8 h-8 text-primary" />, 
       change: formatChange(storeOverview?.totalEmployees, storeOverview?.previousPeriodEmployees),
       loading: loading
     },
@@ -94,7 +94,7 @@ const DashboardStats = () => {
                   )}
                 </h3>
                 <p className={`text-xs font-medium mt-1 ${
-                  stat.change.startsWith('+') ? 'text-emerald-500' : 'text-red-500'
+                  stat.change.startsWith('+') ? 'text-primary' : 'text-red-500'
                 }`}>
                   {stat.loading ? (
                     <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
@@ -103,7 +103,7 @@ const DashboardStats = () => {
                   )}
                 </p>
               </div>
-              <div className="p-3 bg-emerald-50 rounded-full">
+              <div className="p-3 bg-primary/10 rounded-full">
                 {stat.icon}
               </div>
             </div>

@@ -34,17 +34,17 @@ const HeroSection = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             <span 
-              className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent animate-fade-in-up"
+              className="bg-gradient-to-r from-primary to-primary/90 bg-clip-text text-transparent animate-fade-in-up"
               style={{ animationDelay: '0.1s' }}
             >
-              Powerful POS System For
+              Powerful RetailHub For
             </span>
             <br />
             <TypewriterText
               text="Malls, Supermarkets & Retail Chains"
               speed={80}
               delay={1500}
-              className="text-primary bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent"
+              className="text-primary bg-gradient-to-r from-primary to-primary/90 bg-clip-text text-transparent"
               showCursor={true}
               cursorBlink={true}
             />
@@ -135,7 +135,7 @@ const HeroSection = () => {
                 </div>
                 <img 
                   src="/pos-mockup.svg" 
-                  alt="POS System Interface" 
+                  alt="RetailHub Interface" 
                   className="w-full h-auto rounded-lg shadow-inner"
                 />
               </div>

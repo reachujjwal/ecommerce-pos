@@ -28,7 +28,7 @@ import { useToast } from "../../components/ui/use-toast";
 const mockCommissions = [
   {
     id: 1,
-    storeName: "Ujjwal Mart",
+    storeName: "RetailHub Mart",
     currentRate: 2.5,
     previousRate: 2.0,
     totalEarnings: 12500,

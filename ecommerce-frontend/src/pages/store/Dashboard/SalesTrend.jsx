@@ -108,7 +108,7 @@ const SalesTrend = () => {
         {loading ? (
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
-              <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
               <p className="mt-2 text-gray-500">Loading sales data...</p>
             </div>
           </div>
@@ -146,7 +146,7 @@ const SalesTrend = () => {
         ) : (
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
-              <TrendingUp className="w-16 h-16 text-emerald-500 mx-auto" />
+              <TrendingUp className="w-16 h-16 text-primary mx-auto" />
               <p className="mt-2 text-gray-500">No sales data available</p>
             </div>
           </div>

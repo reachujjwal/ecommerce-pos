@@ -47,7 +47,7 @@ const TodayOverview = () => {
                   <p className="text-sm font-medium text-gray-500">{kpi.title}</p>
                   <h3 className="text-2xl font-bold mt-1">{kpi.value}</h3>
                   <p className={`text-xs font-medium mt-1 ${
-                    kpi.changeType === 'positive' ? 'text-emerald-500' : 
+                    kpi.changeType === 'positive' ? 'text-primary' : 
                     kpi.changeType === 'negative' ? 'text-red-500' : 'text-gray-500'
                   }`}>
                     {kpi.change}

@@ -1,12 +1,11 @@
 
 import { Bell, UserCircle, Search } from "lucide-react";
 import { ThemeToggle } from "../../../components/theme-toggle";
-
-
-
 import { Input } from "../../../components/ui/input";
+import { useSelector } from "react-redux";
 
 export default function StoreTopbar() {
+  const { userProfile } = useSelector((state) => state.user);
  
   return (
     <header className="w-full h-16 bg-background border-b flex items-center px-6 justify-between shadow-sm">
@@ -32,7 +31,7 @@ export default function StoreTopbar() {
           <span className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">
             <UserCircle className="w-6 h-6" />
           </span>
-          <span className="font-medium text-foreground">Store Admin</span>
+          <span className="font-medium text-foreground">{userProfile?.fullName || userProfile?.name || 'Store Admin'}</span>
         </div>
       </div>
     </header>

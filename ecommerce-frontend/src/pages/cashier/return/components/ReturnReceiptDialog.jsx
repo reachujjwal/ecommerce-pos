@@ -29,7 +29,7 @@ const ReturnReceiptDialog = ({
       </DialogHeader>
       <div className="bg-white p-6 max-h-96 overflow-y-auto">
         <div className="text-center mb-4">
-          <h3 className="font-bold text-lg">POS SYSTEM</h3>
+          <h3 className="font-bold text-lg">RetailHub</h3>
           <p className="text-sm">123 Main Street, City</p>
           <p className="text-sm">Tel: 123-456-7890</p>
         </div>

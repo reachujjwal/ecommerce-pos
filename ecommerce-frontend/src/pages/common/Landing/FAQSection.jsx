@@ -11,8 +11,8 @@ import { MessageCircle, Mail, Phone, HelpCircle, ChevronRight } from 'lucide-rea
 const FAQSection = () => {
   const faqs = [
     {
-      question: "Can I use the POS system offline?",
-      answer: "Yes! Our POS system works completely offline. All data syncs automatically when you're back online, ensuring uninterrupted business operations even during internet outages."
+      question: "Can I use the RetailHub offline?",
+      answer: "Yes! Our RetailHub works completely offline. All data syncs automatically when you're back online, ensuring uninterrupted business operations even during internet outages."
     },
     {
       question: "Is the system GST-compliant?",
@@ -56,7 +56,7 @@ const FAQSection = () => {
       icon: <Mail className="w-5 h-5" />,
       title: "Email Support",
       description: "Get answers by email",
-      action: "support@pospro.com",
+      action: "ujjawalkumar7438@gmail.com",
       buttonText: "Send Email"
     },
     {
@@ -83,7 +83,7 @@ const FAQSection = () => {
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to know about our POS system. Can't find the answer you're looking for?
+            Everything you need to know about our RetailHub. Can't find the answer you're looking for?
             Please chat with our friendly team.
           </p>
         </div>

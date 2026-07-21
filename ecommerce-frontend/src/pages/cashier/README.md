@@ -1,4 +1,4 @@
-# Cashier POS System
+# Cashier RetailHub
 
 A comprehensive Point of Sale (POS) system designed for cashiers to efficiently manage sales, customers, and transactions in retail environments.
 
@@ -7,7 +7,7 @@ A comprehensive Point of Sale (POS) system designed for cashiers to efficiently 
 ```
 src/pages/cashier/
 ├── components/
-│   ├── POSHeader.jsx              # POS system header with branch info
+│   ├── POSHeader.jsx              # RetailHub header with branch info
 │   ├── ReceiptDialog.jsx          # Receipt printing and display
 │   └── HeldOrdersDialog.jsx       # Manage held/suspended orders
 ├── cart/

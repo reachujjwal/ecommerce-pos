@@ -5,7 +5,7 @@ const FeatureComparisonTable = () => {
   // Feature categories and their features
   const featureCategories = [
     {
-      name: 'Core POS Features',
+      name: 'Core RetailHub Features',
       features: [
         { name: 'Barcode Scanning', basic: true, pro: true, enterprise: true },
         { name: 'Receipt Printing', basic: true, pro: true, enterprise: true },

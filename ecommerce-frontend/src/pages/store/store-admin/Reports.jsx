@@ -149,7 +149,7 @@ export default function Reports() {
             {loading ? (
               <div className="h-80 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
                   <p className="mt-2 text-gray-500">Loading chart data...</p>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function Reports() {
                       dataKey="sales"
                       fill="currentColor"
                       radius={[4, 4, 0, 0]}
-                      className="fill-emerald-500"
+                      className="fill-primary"
                     />
                   </BarChart>
                 </ResponsiveContainer>
@@ -204,7 +204,7 @@ export default function Reports() {
             {loading ? (
               <div className="h-80 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
                   <p className="mt-2 text-gray-500">Loading chart data...</p>
                 </div>
               </div>

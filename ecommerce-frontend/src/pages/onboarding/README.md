@@ -1,6 +1,6 @@
 # Multi-Step Onboarding Form
 
-This directory contains the onboarding feature for the POS system.
+This directory contains the onboarding feature for the RetailHub.
 
 ## Components
 

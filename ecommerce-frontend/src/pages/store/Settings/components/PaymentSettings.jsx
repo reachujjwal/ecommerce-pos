@@ -46,7 +46,7 @@ const PaymentSettings = ({ settings, onChange }) => {
     <Card id="payment-settings">
       <CardHeader>
         <CardTitle className="flex items-center">
-          <CreditCard className="mr-2 h-5 w-5 text-emerald-500" />
+          <CreditCard className="mr-2 h-5 w-5 text-primary" />
           Payment Settings
         </CardTitle>
         <CardDescription>

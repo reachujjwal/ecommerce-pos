@@ -83,7 +83,8 @@ const Onboarding = () => {
           role: 'ROLE_STORE_ADMIN',
         })).unwrap();
         if (signupRes && signupRes.jwt) {
-          localStorage.setItem('jwt', signupRes.data.jwt);
+          localStorage.setItem('jwt', signupRes.jwt);
+          dispatch(getUserProfile(signupRes.jwt));
         }
         setFadeIn(false);
         setTimeout(() => {
@@ -91,7 +92,7 @@ const Onboarding = () => {
           setFadeIn(true);
         }, 150);
       } catch (err) {
-        setLocalError(err || 'Signup failed');
+        setLocalError(err?.message || (typeof err === 'string' ? err : 'Signup failed'));
       }
       setLocalLoading(false);
     } else if (step === 2) {
@@ -108,7 +109,7 @@ const Onboarding = () => {
         // On success, redirect or show success
         navigate('/store');
       } catch (err) {
-        setLocalError(err || 'Store creation failed');
+        setLocalError(err?.message || (typeof err === 'string' ? err : 'Store creation failed'));
       }
       setLocalLoading(false);
     }
@@ -179,7 +180,7 @@ const Onboarding = () => {
               </svg>
             </div>
             <h1 className="text-2xl font-bold mb-2">
-              Welcome to Your POS System
+              Welcome to Your RetailHub
             </h1>
             <p className="text-primary-foreground/80 text-sm">
               Set up your business profile in minutes
@@ -211,7 +212,7 @@ const Onboarding = () => {
               {/* Title */}
               <h1 className="text-4xl font-bold mb-6 leading-tight">
                 Welcome to Your
-                <span className="block text-yellow-300">POS System</span>
+                <span className="block text-yellow-300">RetailHub</span>
               </h1>
 
               {/* Description */}
@@ -279,7 +280,7 @@ const Onboarding = () => {
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                   </svg>
-                  {error || localError}
+                  {typeof (error || localError) === 'string' ? (error || localError) : (error?.message || localError?.message || 'An error occurred')}
                 </div>
               </div>
             )}

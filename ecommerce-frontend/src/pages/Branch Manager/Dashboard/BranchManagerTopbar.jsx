@@ -40,7 +40,7 @@ export default function BranchManagerTopbar() {
             <User className="h-5 w-5 text-primary" />
           </div>
           <div className="hidden md:block">
-            <p className="text-sm font-medium text-foreground">{userProfile?.name || "Branch Manager"}</p>
+            <p className="text-sm font-medium text-foreground">{userProfile?.fullName || userProfile?.name || "Branch Manager"}</p>
             <p className="text-xs text-muted-foreground">{userProfile?.email || "manager@example.com"}</p>
           </div>
         </div>

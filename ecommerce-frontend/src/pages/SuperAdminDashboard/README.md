@@ -1,6 +1,6 @@
 # SuperAdmin Dashboard
 
-A comprehensive dashboard for managing all stores, commissions, and system-wide operations in the POS system.
+A comprehensive dashboard for managing all stores, commissions, and system-wide operations in the RetailHub.
 
 ## 🏗️ Folder Structure
 

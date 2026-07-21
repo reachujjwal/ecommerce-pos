@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../Redux Toolkit/features/user/userThunks";
 import {
   LayoutDashboard,
@@ -47,6 +47,12 @@ export default function SuperAdminSidebar() {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { userProfile } = useSelector((state) => state.user);
+
+  const formatRole = (role) => {
+    if (!role) return "Super Admin";
+    return role.replace("ROLE_", "").split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+  };
 
   const handleLogout = () => {
     dispatch(logout());
@@ -55,9 +61,16 @@ export default function SuperAdminSidebar() {
 
   return (
     <aside className="h-screen w-64 bg-sidebar border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg">
-      <div className="mb-8 text-2xl font-extrabold text-primary tracking-tight flex items-center gap-2">
-        <Store className="w-7 h-7 text-primary" />
-        Super Admin
+      <div className="mb-8 flex items-center gap-3">
+        <Store className="w-8 h-8 text-primary flex-shrink-0" />
+        <div className="flex flex-col overflow-hidden">
+          <span className="text-xl font-extrabold text-primary tracking-tight truncate">
+            RetailHub
+          </span>
+          <span className="text-xs text-muted-foreground truncate font-medium">
+            {formatRole(userProfile?.role)}
+          </span>
+        </div>
       </div>
       <nav className="flex-1 overflow-y-auto">
         <ul className="space-y-2">
@@ -67,15 +80,15 @@ export default function SuperAdminSidebar() {
                 to={link.path}
                 className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors text-base font-medium group ${
                   location.pathname.startsWith(link.path)
-                    ? "bg-sidebar-accent text-sidebar-accent-foreground shadow"
-                    : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    ? "bg-primary text-primary-foreground shadow"
+                    : "text-sidebar-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >
                 <span
                   className={`transition-colors ${
                     location.pathname.startsWith(link.path)
-                      ? "text-sidebar-primary"
-                      : "text-sidebar-foreground/60 group-hover:text-sidebar-primary"
+                      ? "text-primary-foreground"
+                      : "text-sidebar-foreground/60 group-hover:text-primary"
                   }`}
                 >
                   {link.icon}

@@ -17,7 +17,7 @@ const navItems = [
   {
     path: "/cashier",
     icon: <ShoppingCartIcon size={20} />,
-    label: "POS Terminal",
+    label: "RetailHub Terminal",
   },
   {
     path: "/cashier/orders",

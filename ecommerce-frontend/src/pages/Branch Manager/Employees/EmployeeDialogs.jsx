@@ -21,7 +21,7 @@ export const AddEmployeeDialog = ({
 }) => (
   <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
     <DialogTrigger asChild>
-      <Button className="bg-emerald-600 hover:bg-emerald-700">
+      <Button className="bg-primary hover:bg-primary/90">
         <Plus className="mr-2 h-4 w-4" /> Add Employee
       </Button>
     </DialogTrigger>

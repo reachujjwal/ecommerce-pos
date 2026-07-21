@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../Redux Toolkit/features/user/userThunks";
 import {
     LayoutDashboard,
@@ -9,6 +9,7 @@ import {
     MapPin,
     LogOut,
     ShoppingBag,
+    Store,
 } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 
@@ -39,6 +40,12 @@ export default function CustomerSidebar() {
     const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const { userProfile } = useSelector((state) => state.user);
+
+    const formatRole = (role) => {
+        if (!role) return "Customer";
+        return role.replace("ROLE_", "").split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+    };
 
     const handleLogout = () => {
         dispatch(logout());
@@ -47,9 +54,16 @@ export default function CustomerSidebar() {
 
     return (
         <aside className="h-screen w-64 bg-sidebar border-r border-sidebar-border flex flex-col py-6 px-4 shadow-lg sticky top-0">
-            <div className="mb-8 text-2xl font-extrabold text-primary tracking-tight flex items-center gap-2 px-2">
-                <User className="w-7 h-7 text-primary" />
-                Customer Portal
+            <div className="mb-8 flex items-center gap-3 px-2">
+                <Store className="w-8 h-8 text-primary flex-shrink-0" />
+                <div className="flex flex-col overflow-hidden">
+                    <span className="text-xl font-extrabold text-primary tracking-tight truncate">
+                        RetailHub
+                    </span>
+                    <span className="text-xs text-muted-foreground truncate font-medium">
+                        {formatRole(userProfile?.role)}
+                    </span>
+                </div>
             </div>
             <nav className="flex-1 overflow-y-auto">
                 <ul className="space-y-2">
@@ -58,14 +72,14 @@ export default function CustomerSidebar() {
                             <Link
                                 to={link.path}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 text-base font-medium group ${location.pathname.startsWith(link.path)
-                                        ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-md translate-x-1"
-                                        : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:translate-x-1"
+                                        ? "bg-primary text-primary-foreground shadow-md translate-x-1"
+                                        : "text-sidebar-foreground hover:bg-primary/10 hover:text-primary hover:translate-x-1"
                                     }`}
                             >
                                 <span
                                     className={`transition-colors ${location.pathname.startsWith(link.path)
-                                            ? "text-sidebar-primary"
-                                            : "text-sidebar-foreground/60 group-hover:text-sidebar-primary"
+                                            ? "text-primary-foreground"
+                                            : "text-sidebar-foreground/60 group-hover:text-primary"
                                         }`}
                                 >
                                     {link.icon}
@@ -79,7 +93,7 @@ export default function CustomerSidebar() {
             <div className="mt-auto pt-6 border-t border-sidebar-border">
                 <Button
                     onClick={handleLogout}
-                    variant="destructive"
+                    variant=""
                     className="w-full flex items-center gap-2 justify-center"
                 >
                     <LogOut className="w-4 h-4" />

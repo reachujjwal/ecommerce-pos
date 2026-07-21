@@ -8,10 +8,10 @@ const ProductDetails = ({ product }) => {
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="bg-gradient-to-r from-emerald-50 to-emerald-100 pb-4">
+      <CardHeader className="bg-gradient-to-r from-primary/10 to-primary/20 pb-4">
         <CardTitle className="text-2xl font-bold">{product.name}</CardTitle>
         {product.brand && (
-          <CardDescription className="text-sm font-medium text-emerald-700">
+          <CardDescription className="text-sm font-medium text-primary">
             {product.brand}
           </CardDescription>
         )}
@@ -68,7 +68,7 @@ const ProductDetails = ({ product }) => {
               <div>
                 <div className="text-sm text-gray-500">Price</div>
                 <div className="font-medium">
-                  <span className="text-lg font-bold text-emerald-700">
+                  <span className="text-lg font-bold text-primary">
                     ${product.sellingPrice?.toFixed(2) || product.price?.toFixed(2) || '0.00'}
                   </span>
                   {product.mrp && product.mrp > (product.sellingPrice || product.price) && (

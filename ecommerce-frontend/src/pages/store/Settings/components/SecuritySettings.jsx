@@ -32,7 +32,7 @@ const SecuritySettings = ({ settings, onChange }) => {
     <Card id="security-settings">
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Shield className="mr-2 h-5 w-5 text-emerald-500" />
+          <Shield className="mr-2 h-5 w-5 text-primary" />
           Security Settings
         </CardTitle>
         <CardDescription>

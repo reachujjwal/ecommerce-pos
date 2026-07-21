@@ -41,7 +41,7 @@ const NotificationSettings = ({ settings, onChange }) => {
     <Card id="notification-settings">
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Bell className="mr-2 h-5 w-5 text-emerald-500" />
+          <Bell className="mr-2 h-5 w-5 text-primary" />
           Notification Settings
         </CardTitle>
         <CardDescription>

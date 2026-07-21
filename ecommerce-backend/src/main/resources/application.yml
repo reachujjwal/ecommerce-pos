@@ -1,6 +1,6 @@
 spring:
   application:
-    name: pos-system
+    name: retailhub
 
   datasource:
     url: jdbc:mysql://${DB_HOST:mysql-db}:${DB_PORT:3306}/${DB_NAME:ecommerce_db}?useSSL=false&allowPublicKeyRetrieval=true

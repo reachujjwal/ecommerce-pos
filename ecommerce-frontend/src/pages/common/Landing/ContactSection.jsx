@@ -23,7 +23,7 @@ const ContactSection = () => {
                 Ready to Streamline Your Store?
               </h2>
               <p className="text-xl opacity-90">
-                Join thousands of retailers who trust our POS system to grow their business
+                Join thousands of retailers who trust RetailHub to grow their business
               </p>
             </div>
 
@@ -115,8 +115,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Phone</p>
-                    <p className="opacity-90">+91 98765 43210</p>
-                    <p className="opacity-90">+91 98765 43211</p>
+                    <p className="opacity-90">+91 7479417438</p>
+                    <p className="opacity-90">+91 7479417438</p>
                   </div>
                 </div>
 
@@ -126,8 +126,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Email</p>
-                    <p className="opacity-90">sales@pospro.com</p>
-                    <p className="opacity-90">support@pospro.com</p>
+                    <p className="opacity-90">ujjawalkumar7438@gmail.com</p>
+                    <p className="opacity-90">ujjawalkumar7438@gmail.com</p>
                   </div>
                 </div>
 
@@ -137,8 +137,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Office Address</p>
-                    <p className="opacity-90">123 Tech Park, Whitefield</p>
-                    <p className="opacity-90">Bangalore, Karnataka 560066</p>
+                    <p className="opacity-90">Sec-4, Bokaro</p>
+                    <p className="opacity-90">Bokaro Steel City,Jharkhand 827004</p>
                   </div>
                 </div>
 

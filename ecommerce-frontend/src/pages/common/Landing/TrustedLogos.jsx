@@ -9,7 +9,7 @@ const TrustedLogos = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
             Trusted by leading retailers across India
           </h2>
-          <p className="text-muted-foreground">Join thousands of successful businesses using our POS system</p>
+          <p className="text-muted-foreground">Join thousands of successful businesses using our RetailHub</p>
         </div>
 
         {/* Logos Grid */}
@@ -18,10 +18,10 @@ const TrustedLogos = () => {
             {
               name: 'SuperMart',
               icon: <Building2 className="w-6 h-6" />,
-              bgColor: 'bg-gradient-to-br from-emerald-500 to-emerald-600',
-              textColor: 'text-emerald-600',
-              borderColor: 'border-emerald-200',
-              shadowColor: 'shadow-emerald-100'
+              bgColor: 'bg-gradient-to-br from-primary to-primary/90',
+              textColor: 'text-primary',
+              borderColor: 'border-primary/30',
+              shadowColor: 'shadow-primary/20'
             },
             {
               name: 'Fresh Grocery',

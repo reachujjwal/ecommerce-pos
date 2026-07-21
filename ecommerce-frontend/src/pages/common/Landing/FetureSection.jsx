@@ -15,7 +15,7 @@ const FetureSection = () => {
             Everything You Need to Run Your Store
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our comprehensive POS system includes all the features modern retailers need to succeed.
+            Our comprehensive RetailHub includes all the features modern retailers need to succeed.
           </p>
         </div>
 

@@ -10,19 +10,20 @@ import {
 
 export default function Settings() {
   const dispatch = useDispatch();
-  const { store} = useSelector((state) => state.store);
+  const { store } = useSelector((state) => state.store);
   // Sample store settings data - in a real app, this would come from Redux
   const [storeSettings, setStoreSettings] = useState({
-    storeName: "My POS Store",
+    storeName: "My RetailHub Store",
     storeEmail: "contact@myposstore.com",
     storePhone: "(555) 123-4567",
     storeAddress: "123 Main St, Anytown, USA 12345",
     storeLogo: "/logo.png",
     storeDescription: "A modern point of sale system for retail businesses.",
-    currency: "USD",
+    currency: "₹",
     taxRate: "7.5",
-    timezone: "America/New_York",
-    dateFormat: "MM/DD/YYYY",
+
+    timezone: "Asia/Kolkata",
+    dateFormat: "DD-MM-YYYY",
     receiptFooter: "Thank you for shopping with us!",
   });
 
@@ -118,7 +119,7 @@ export default function Settings() {
     });
   };
 
-  
+
 
   return (
     <div className="space-y-6">

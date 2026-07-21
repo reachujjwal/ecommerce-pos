@@ -53,12 +53,12 @@ const SettingsNavigation = ({ activeSection }) => {
             href={item.href}
             className={`flex items-center px-3 py-2 text-sm font-medium rounded-md ${
               isActive
-                ? "bg-emerald-100 text-emerald-700"
+                ? "bg-primary/20 text-primary"
                 : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             }`}
           >
             <Icon className={`mr-3 h-5 w-5 ${
-              isActive ? "text-emerald-500" : "text-gray-400"
+              isActive ? "text-primary" : "text-gray-400"
             }`} />
             {item.label}
           </a>

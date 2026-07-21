@@ -6,7 +6,7 @@ const LoadingState = () => {
   return (
     <Card>
       <CardContent className="flex justify-center items-center h-64 p-6">
-        <Loader2 className="h-8 w-8 animate-spin text-emerald-500" />
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
         <span className="ml-2 text-lg">Loading store information...</span>
       </CardContent>
     </Card>

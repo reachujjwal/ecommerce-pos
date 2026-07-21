@@ -357,7 +357,7 @@ const ProductForm = ({
             )}
             <Button
               type="submit"
-              className="bg-emerald-600 hover:bg-emerald-700"
+              className="bg-primary hover:bg-primary/90"
               disabled={isSubmitting || loading}
             >
               {isSubmitting || loading ? (

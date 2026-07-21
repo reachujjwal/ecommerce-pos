@@ -5,6 +5,7 @@ import { getBranchById } from "../../../Redux Toolkit/features/branch/branchThun
 import { Button } from "../../../components/ui/button";
 import { LogOutIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Store } from "lucide-react";
 import { logout } from "../../../Redux Toolkit/features/user/userThunks";
 import { ThemeToggle } from "../../../components/theme-toggle";
 import BranchInfo from "./BranchInfo";
@@ -13,7 +14,13 @@ const CashierSideBar = ({ navItems, onClose }) => {
   const dispatch = useDispatch();
   const { userProfile } = useSelector((state) => state.user);
   const { branch, loading, error } = useSelector((state) => state.branch);
+  const { store } = useSelector((state) => state.store);
   const navigate=useNavigate();
+
+  const formatRole = (role) => {
+    if (!role) return "Cashier";
+    return role.replace("ROLE_", "").split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+  };
 
   useEffect(() => {
     if (userProfile && userProfile.branchId) {
@@ -53,8 +60,16 @@ const CashierSideBar = ({ navItems, onClose }) => {
           />
         </svg>
       </Button>
-      <div className="flex items-center justify-center p-2 mb-6">
-        <h1 className="text-xl font-bold text-sidebar-foreground">POS System</h1>
+      <div className="flex items-center gap-3 p-2 mb-6">
+        <Store className="w-8 h-8 text-primary flex-shrink-0" />
+        <div className="flex flex-col overflow-hidden">
+          <span className="text-xl font-extrabold text-primary tracking-tight truncate">
+            {store?.brand || store?.storeName || branch?.name || 'RetailHub'}
+          </span>
+          <span className="text-xs text-muted-foreground truncate font-medium">
+            {formatRole(userProfile?.role)}
+          </span>
+        </div>
       </div>
 
       <nav className="space-y-2 flex-1">
@@ -62,10 +77,10 @@ const CashierSideBar = ({ navItems, onClose }) => {
           <Link
             key={item.path}
             to={item.path}
-            className={`flex items-center justify-between p-3 rounded-md hover:bg-sidebar-accent transition-colors ${
+            className={`flex items-center justify-between p-3 rounded-md transition-colors ${
               location.pathname === item.path
-                ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                : "text-sidebar-foreground"
+                ? "bg-primary text-primary-foreground shadow-sm"
+                : "text-sidebar-foreground hover:bg-primary/10 hover:text-primary"
             }`}
             onClick={() => {
               if (onClose) onClose();

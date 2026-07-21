@@ -204,7 +204,7 @@ const Login = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <ShoppingCart className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-foreground">POS Pro</span>
+            <span className="text-2xl font-bold text-foreground">RetailHub</span>
           </div>
           <h1 className="text-2xl font-bold text-foreground">
             {showForgotPassword ? 'Reset Password' : showSignup ? 'Create Account' : 'Welcome Back'}
@@ -347,7 +347,7 @@ const Login = () => {
             {/* <div className="mt-6 p-4 bg-muted rounded-lg">
               <p className="text-sm text-muted-foreground text-center">
                 <strong>Demo Account:</strong><br />
-                Email: demo@pospro.com<br />
+                Email: demo@RetailHub.com<br />
                 Password: demo123
               </p>
             </div> */}

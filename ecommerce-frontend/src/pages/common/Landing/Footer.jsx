@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-card text-card-foreground border-t">
       {/* Main Footer */}
@@ -16,10 +16,10 @@ const Footer = () => {
               <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center mr-2">
                 <span className="text-primary-foreground font-bold text-lg">P</span>
               </div>
-              <span className="text-foreground font-bold text-xl">POSPro</span>
+              <span className="text-foreground font-bold text-xl">RetailHub</span>
             </div>
             <p className="mb-4 text-muted-foreground max-w-md">
-              Empowering retailers with smart point-of-sale solutions that streamline operations, 
+              Empowering retailers with smart point-of-sale solutions that streamline operations,
               boost sales, and enhance customer experiences.
             </p>
             <div className="flex space-x-4 mb-6">
@@ -39,14 +39,14 @@ const Footer = () => {
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
-            
+
             {/* Newsletter */}
             <div>
               <h4 className="text-foreground font-medium mb-3">Subscribe to our newsletter</h4>
               <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
+                <input
+                  type="email"
+                  placeholder="Your email address"
                   className="bg-background text-foreground px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary flex-grow border border-input"
                 />
                 <Button className="rounded-l-none">
@@ -55,7 +55,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-foreground font-medium text-lg mb-4">Quick Links</h4>
@@ -64,11 +64,11 @@ const Footer = () => {
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a></li>
+              {/* <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a></li> */}
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
-          
+
           {/* Resources */}
           <div>
             <h4 className="text-foreground font-medium text-lg mb-4">Resources</h4>
@@ -81,33 +81,33 @@ const Footer = () => {
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Partners</a></li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h4 className="text-foreground font-medium text-lg mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-2 mt-0.5 text-muted-foreground" />
-                <span className="text-muted-foreground">support@pospro.com</span>
+                <span className="text-muted-foreground">ujjawalkumar7438@gmail.com</span>
               </li>
               <li className="text-muted-foreground">
-                <p>123 Tech Park, Whitefield</p>
-                <p>Bangalore, Karnataka 560066</p>
+                <p>Sec-4, Bokaro</p>
+                <p>Bokaro Steel City,Jharkhand 827004</p>
               </li>
               <li className="text-muted-foreground">
-                <p>+91 98765 43210</p>
+                <p>+91 7479417438</p>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      
+
       {/* Bottom Footer */}
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="md:flex md:items-center md:justify-between">
             <div className="text-sm text-muted-foreground">
-              <p>&copy; {currentYear} POSPro. All rights reserved.</p>
+              <p>&copy; {currentYear} RetailHub. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>

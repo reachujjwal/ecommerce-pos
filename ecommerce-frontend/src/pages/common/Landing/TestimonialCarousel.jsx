@@ -9,7 +9,7 @@ const TestimonialCarousel = () => {
       name: 'Rajesh Kumar',
       position: 'Owner, Metro Retail',
       image: '/testimonial-1.jpg', // These would be actual images in production
-      content: 'Implementing this POS system has transformed our business operations. The inventory management features alone have saved us countless hours and reduced errors by 35%.',
+      content: 'Implementing this RetailHub has transformed our business operations. The inventory management features alone have saved us countless hours and reduced errors by 35%.',
       rating: 5,
       businessType: 'Supermarket',
       employeeCount: '50+',
@@ -83,7 +83,7 @@ const TestimonialCarousel = () => {
             Trusted by Businesses <span className="text-primary">Like Yours</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. See what our customers have to say about how our POS system has transformed their businesses.
+            Don't just take our word for it. See what our customers have to say about how our RetailHub has transformed their businesses.
           </p>
         </div>
 

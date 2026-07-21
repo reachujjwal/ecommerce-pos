@@ -99,7 +99,7 @@ export default function Sales() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold tracking-tight">Sales Management</h1>
-        <Button className="bg-emerald-600 hover:bg-emerald-700">
+        <Button className="bg-primary hover:bg-primary/90">
           <Plus className="mr-2 h-4 w-4" /> New Sale
         </Button>
       </div>
@@ -118,7 +118,7 @@ export default function Sales() {
                     formatCurrency(storeOverview?.totalSales || 0)
                   )}
                 </h3>
-                <p className="text-xs text-emerald-500 mt-1">
+                <p className="text-xs text-primary mt-1">
                   {loading ? (
                     <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
                   ) : (
@@ -126,8 +126,8 @@ export default function Sales() {
                   )} from last week
                 </p>
               </div>
-              <div className="p-3 bg-emerald-100 rounded-full">
-                <DollarSign className="w-8 h-8 text-emerald-600" />
+              <div className="p-3 bg-primary/20 rounded-full">
+                <DollarSign className="w-8 h-8 text-primary" />
               </div>
             </div>
           </CardContent>
@@ -145,7 +145,7 @@ export default function Sales() {
                     storeOverview?.todayOrders || 0
                   )}
                 </h3>
-                <p className="text-xs text-emerald-500 mt-1">
+                <p className="text-xs text-primary mt-1">
                   {loading ? (
                     <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
                   ) : (
@@ -199,7 +199,7 @@ export default function Sales() {
                     formatCurrency(storeOverview?.averageOrderValue || 0)
                   )}
                 </h3>
-                <p className="text-xs text-emerald-500 mt-1">
+                <p className="text-xs text-primary mt-1">
                   {loading ? (
                     <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
                   ) : (
@@ -225,7 +225,7 @@ export default function Sales() {
             {loading ? (
               <div className="h-80 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
                   <p className="mt-2 text-gray-500">Loading chart data...</p>
                 </div>
               </div>
@@ -261,7 +261,7 @@ export default function Sales() {
                       dataKey="sales"
                       stroke="currentColor"
                       strokeWidth={2}
-                      className="stroke-emerald-500"
+                      className="stroke-primary"
                       activeDot={{ r: 8, fill: "#10b981" }}
                     />
                   </LineChart>
@@ -283,7 +283,7 @@ export default function Sales() {
             {loading ? (
               <div className="h-80 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
                   <p className="mt-2 text-gray-500">Loading chart data...</p>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function Sales() {
                       dataKey="value"
                       fill="currentColor"
                       radius={[4, 4, 0, 0]}
-                      className="fill-emerald-500"
+                      className="fill-primary"
                     />
                   </BarChart>
                 </ResponsiveContainer>

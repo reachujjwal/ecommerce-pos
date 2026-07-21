@@ -56,7 +56,7 @@ const StoreSettings = ({ settings, onChange }) => {
     <Card id="store-settings">
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Store className="mr-2 h-5 w-5 text-emerald-500" />
+          <Store className="mr-2 h-5 w-5 text-primary" />
           Store Settings
         </CardTitle>
         <CardDescription>
