@@ -7,6 +7,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: ecommerce_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+      
     healthcheck:
       test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       timeout: 10s
@@ -14,7 +17,7 @@ services:
       interval: 10s
       start_period: 10s
     networks:
-      - ujjwal
+      - ujjwal  
 
   retailhub:
     build: ./ecommerce-backend
@@ -43,3 +46,6 @@ services:
 
 networks:
   ujjwal:
+
+volumes:
+  mysql-data:  
