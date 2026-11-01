@@ -20,13 +20,21 @@ import java.io.IOException;
 import java.util.List;
 
 public class JwtValidator extends OncePerRequestFilter {
+
+	@Override
+	protected boolean shouldNotFilter(HttpServletRequest request) {
+		String path = request.getServletPath();
+		// Skip JWT validation for public auth endpoints
+		return path.startsWith("/auth/");
+	}
+
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
-									FilterChain filterChain) throws ServletException, IOException {
+			FilterChain filterChain) throws ServletException, IOException {
 		String jwt = request.getHeader(JwtConstant.JWT_HEADER);
-		if(jwt!=null){
-			jwt=jwt.substring(7);
-			try{
+		if (jwt != null && jwt.startsWith("Bearer ")) {
+			jwt = jwt.substring(7);
+			try {
 				SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
 				Claims claims = Jwts.parser().verifyWith(key).build()
 						.parseSignedClaims(jwt).getPayload();
@@ -37,7 +45,7 @@ public class JwtValidator extends OncePerRequestFilter {
 				List<GrantedAuthority> auths = AuthorityUtils.commaSeparatedStringToAuthorityList(authorities);
 				Authentication authentication = new UsernamePasswordAuthenticationToken(email, null, auths);
 				SecurityContextHolder.getContext().setAuthentication(authentication);
-			}catch (Exception e){
+			} catch (Exception e) {
 				throw new BadCredentialsException("Invalid token....");
 			}
 		}
